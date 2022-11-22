@@ -6,6 +6,11 @@ pub fn greeting(name: &str) -> String {
     format!("Hello {}!", name)
 }
 
+pub fn ret_unit_type() {
+    let x = 1;
+    let _z = if x % 2 == 1 {"odd"} else {"even"};
+}
+
 pub struct Guess {
     value:i32,
 }
@@ -32,6 +37,8 @@ impl Guess{
 
 #[cfg(test)]
 mod tests {
+    use num::Complex;
+
     use super::*;
 
     #[test]
@@ -114,5 +121,43 @@ mod tests {
     assert!(abc.0 + abc.1 == abc.2);
     assert!(xyz.0 + xyz.1 == xyz.2);
     }
+
+    #[test]
+    #[should_panic]
+    fn nan_test() {
+        let x = (-42.0_f32).sqrt();
+        assert_eq!(x,x);
+    }
+
+    #[test]
+    fn range_test() {
+        for i in 1..=5 {
+            println!("{}", i);
+        }
+    }
+
+    #[test]
+    fn complex_test() {
+        let a = Complex {re:2.1, im:-1.2};
+        let b = Complex::new(11.1,22.2);
+        let result = a+b;
+        println!("{} + {}i", result.re, result.im)
+    }
+
+    #[test]
+    fn bool_test() {
+        // let t = true;
+        let f: bool = false; // 使用类型标注，显式指定f的类型
+
+        if f {
+            println!("这是段无意义的代码");
+        }
+    }
+
+    #[test]
+    fn ret_unit_type_test(){
+        assert_eq!(ret_unit_type(),())
+    }
+
 
 }
