@@ -63,7 +63,7 @@ curl localhost:2022
 systemctl stop firewalld
 systemctl disable firewalld
 
-# 11. 远程远程测试 
+# 11. 远程访问测试 
 curl http://43.139.144.58:2022
 ```
 
