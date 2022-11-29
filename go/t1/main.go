@@ -1,5 +1,12 @@
 package main
 
+/*
+#include <stdio.h>
+void say() {
+	printf("hello world\n");
+}
+*/
+import "C"
 import "fmt"
 
 type usber interface {
@@ -61,7 +68,15 @@ func testUsber() {
 	compute(p)
 }
 
+func testStr() {
+	s1 := "jel"
+	s2 := "还好我；，；，,不知道"
+	fmt.Println(len(s1))
+	fmt.Println(len(s2))
+}
 func main() {
 	// test1()
-	testUsber()
+	// testUsber()
+	// testStr()
+	C.say()
 }
