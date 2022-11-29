@@ -159,5 +159,13 @@ mod tests {
         assert_eq!(ret_unit_type(),())
     }
 
+    #[test]
+    fn ref_and_brrow_test() {
+        let x= 5;
+        let y=&x;
+        assert_eq!(5,x);
+        assert_eq!(5,*y);
+    }
+
 
 }
