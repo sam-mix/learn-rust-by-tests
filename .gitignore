@@ -42,3 +42,7 @@ Cargo.lock
 # Go workspace file
 # go.work
 *.sum
+
+
+# java
+*.class
