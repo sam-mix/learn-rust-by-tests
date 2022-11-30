@@ -58,8 +58,6 @@ public class World {
         return true;
     }
 
-    
-    
     @Override
     public String toString() {
         return "World [name=" + name + ", age=" + age + "]";
@@ -68,8 +66,8 @@ public class World {
     public static void main(String[] args) {
         System.out.println(new World().equals(null));
         System.out.println(new World().equals(1));
-        System.out.println(new World().equals(new World("",0)));
-        System.out.println(new World().equals(new World(null,null)));
+        System.out.println(new World().equals(new World("", 0)));
+        System.out.println(new World().equals(new World(null, null)));
         System.out.println(new World());
     }
 }
