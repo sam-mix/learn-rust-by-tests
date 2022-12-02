@@ -4,5 +4,6 @@ use (
 	./context
 	./example
 	./hello
+	./socket-demo
 	./world
 )
