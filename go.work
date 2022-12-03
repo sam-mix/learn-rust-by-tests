@@ -6,4 +6,5 @@ use (
 	./hello
 	./socket-demo
 	./world
+	./ctc-demo
 )
